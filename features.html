@@ -4,89 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Core Features | Hecos Core - Helping Companion System</title>
-    <meta name="description" content="Explore the native capabilities of Hecos Core: Root-level execution, local code sandbox, semantic memory, and a modular architecture built for speed and privacy.">
-    
+    <meta name="description" content="Explore the native capabilities of Hecos Core: Root-level execution, secure code sandbox, semantic memory, browser automation, OS automation, Control Room widgets, and a modular architecture built for speed and privacy.">
+
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://hecos-project.github.io/features.html">
     <meta property="og:title" content="Hecos Core | Core Features">
-    <meta property="og:description" content="Deep dive into Hecos Core features: Root-level execution, secure sandbox, and modular AI architecture.">
+    <meta property="og:description" content="Deep dive into Hecos Core features: Root-level execution, secure sandbox, modular AI architecture, and real-time Control Room.">
     <meta property="og:image" content="https://hecos-project.github.io/assets/images/og-preview.png">
 
     <link rel="canonical" href="https://hecos-project.github.io/features.html">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&family=Outfit:wght@900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <div class="container">
         <header>
             <a href="index.html" class="logo">
-                <img src="assets/images/logo-sqr.png" alt="Hecos Logo" class="logo-img" style="height: 40px; margin-right: 15px;">
-                <span class="glitch" data-text="HECOS CORE">HECOS CORE</span>
+                <img src="assets/images/logo-sqr.png" alt="Hecos Logo" class="logo-img">
+                <span class="logo-text">Hecos Core</span>
             </a>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="index.html#about">About</a></li>
-                    <li><a href="features.html">Features</a></li>
-                    <li><a href="https://github.com/Hecos-Project/Hecos/wiki/">Docs</a></li>
+                    <li><a href="features.html" class="active">Features</a></li>
+                    <li><a href="https://github.com/Hecos-Project/Hecos/wiki/" target="_blank">Docs</a></li>
                     <li><a href="download/index.html">Download</a></li>
                 </ul>
             </nav>
         </header>
 
         <section class="section">
-            <h1 class="section-title glitch" data-text="FEATURES">FEATURES</h1>
-            
+            <h1 class="section-title">Core Features</h1>
+            <p class="section-lead">The full stack of capabilities that make Hecos a sovereign AI Operating Layer.</p>
+
             <div class="grid" id="details">
-                <div class="card" style="border-left: 4px solid var(--neon-cyan);">
-                    <h3>🪐 Core Modules</h3>
-                    <p>The system kernel is built on <strong>Core Modules</strong>. These form the essential foundation for memory management, configuration persistence, and inter-process communication between AI layers.</p>
+                <div class="card card-cyan">
+                    <span class="card-icon">🪐</span>
+                    <h3>Core Modules</h3>
+                    <p>The system kernel is built on <strong style="color:var(--text)">Core Modules</strong>. These form the essential foundation for memory management, configuration persistence, and inter-process communication between AI layers.</p>
                 </div>
                 <div class="card">
-                    <h3>🧩 Plugin Ecosystem</h3>
-                    <p>Logic is modular. Enable or disable specialized plugins for file management, web search, or media control on the fly without rebooting the system core.</p>
+                    <span class="card-icon">🧩</span>
+                    <h3>Plugin Ecosystem</h3>
+                    <p>Logic is modular. Enable or disable specialized plugins for file management, web search, media control, or reminders on the fly without rebooting the system core.</p>
                 </div>
-                <div class="card" style="border-left: 4px solid var(--neon-magenta);">
-                    <h3>🛠️ Extensions</h3>
-                    <p>Power-user tools for deep desktop integration. Extensions allow Hecos to interact with external software, system environments, and advanced CLI pipelines.</p>
+                <div class="card card-violet">
+                    <span class="card-icon">🛠️</span>
+                    <h3>Extensions &amp; Widgets</h3>
+                    <p>Power-user tools for deep desktop integration. Extensions allow Hecos to interact with external software, system environments, and the modular Control Room widget ecosystem.</p>
                 </div>
-                <div class="card">
-                    <h3>🌐 MCP Native Bridge</h3>
-                    <p>Native Model Context Protocol support. Connect to any <strong>MCP Server</strong> to instantly grant the AI access to remote databases, APIs, and standardized toolkits.</p>
-                </div>
-                <div class="card">
-                    <h3>🤖 Autonomous Agentic Loop</h3>
-                    <p>Watch Hecos reason in real-time. By utilizes multi-step Chain-of-Thought, the AI breaks down complex missions, self-corrects, and executes until completion.</p>
-                </div>
-                <div class="card" style="border-left: 4px solid var(--neon-magenta);">
-                    <h3>🛡️ AST-Security Jail</h3>
-                    <p>A sophisticated Abstract Syntax Tree analysis layer filters all AI-generated code. This creates a secure "Jail" where Python can solve analytical problems without compromising the host operating system's integrity.</p>
+                <div class="card card-cyan">
+                    <span class="card-icon">🌐</span>
+                    <h3>MCP Native Bridge</h3>
+                    <p>Native Model Context Protocol support. Connect to any <strong style="color:var(--text)">MCP Server</strong> to instantly grant the AI access to remote databases, APIs, and standardized toolkits.</p>
                 </div>
                 <div class="card">
-                    <h3>💾 Semantic Memory</h3>
-                    <p>Utilizes SQLite to store not just chat history, but context and learned facts about the user. The AI evolves with you.</p>
+                    <span class="card-icon">🤖</span>
+                    <h3>Autonomous Agentic Loop</h3>
+                    <p>Watch Hecos reason in real-time. By utilizing multi-step Chain-of-Thought, the AI breaks down complex missions, self-corrects, and executes until completion.</p>
+                </div>
+                <div class="card card-violet">
+                    <span class="card-icon">🛡️</span>
+                    <h3>AST-Security Jail</h3>
+                    <p>A sophisticated Abstract Syntax Tree analysis layer filters all AI-generated code. This creates a secure "Jail" where Python can solve analytical problems without compromising the host OS integrity.</p>
                 </div>
                 <div class="card">
-                    <h3>🎙️ Voice Interaction</h3>
-                    <p>Low latency Speech-to-Text and high-quality local Text-to-Speech (Piper) enable a natural, hands-free experience.</p>
+                    <span class="card-icon">💾</span>
+                    <h3>Semantic Memory</h3>
+                    <p>Utilizes SQLite to store not just chat history, but context and learned facts about the user. The AI evolves with you over time, building a persistent cognitive profile.</p>
+                </div>
+                <div class="card card-cyan">
+                    <span class="card-icon">🎙️</span>
+                    <h3>Voice Interaction</h3>
+                    <p>Low latency Speech-to-Text and high-quality local Text-to-Speech (Piper TTS with streaming) enable a natural, hands-free experience with minimal latency.</p>
                 </div>
                 <div class="card">
-                    <h3>🖥️ System Bridge</h3>
-                    <p>Control windows, files, and applications. Hecos can act as your personal OS shell enhanced with AI.</p>
+                    <span class="card-icon">🖥️</span>
+                    <h3>OS Automation</h3>
+                    <p>Control mouse, keyboard, windows, files, and applications natively. Hecos can act as your personal OS shell enhanced with AI-level awareness and decision-making.</p>
+                </div>
+                <div class="card card-green">
+                    <span class="card-icon">🌍</span>
+                    <h3>Browser Automation</h3>
+                    <p>Interact semantically with web pages via a managed Chromium instance. Navigate, click, extract data, and automate browser-based workflows with natural language instructions.</p>
+                </div>
+                <div class="card card-violet">
+                    <span class="card-icon">📡</span>
+                    <h3>Control Room &amp; Widgets</h3>
+                    <p>A dedicated masonry-style dashboard within the WebUI where multiple interactive widgets run simultaneously — OS telemetry, weather, calendar, and more — in real-time iframes.</p>
+                </div>
+                <div class="card card-cyan">
+                    <span class="card-icon">🔀</span>
+                    <h3>Local &amp; Cloud Fluidity</h3>
+                    <p>Works entirely offline with Ollama or KoboldCpp on your hardware, or integrates seamlessly with OpenAI, Anthropic, Google, and any LiteLLM-compatible cloud provider.</p>
                 </div>
             </div>
         </section>
 
         <footer>
-            <div class="community-links" style="margin-top: 0; margin-bottom: 20px;">
+            <div class="community-links">
                 <a href="https://www.youtube.com/@HecosProject" target="_blank">YouTube</a>
                 <a href="https://github.com/Hecos-Project/hecos-project.github.io" target="_blank">GitHub</a>
             </div>
-            <a href="index.html" class="btn">Back to Home</a>
-            <p style="margin-top: 20px;">Hecos Core – Agentic Operating Layer (AGPL v3)</p>
-            <p>Contact: <a href="mailto:hecos.project@gmail.com" style="color: var(--neon-cyan); text-decoration: none;">hecos.project@gmail.com</a></p>
+            <a href="index.html" class="btn">← Back to Home</a>
+            <p style="margin-top: 24px;">Hecos Core – Agentic Operating Layer (AGPL v3)</p>
+            <p>Contact: <a href="mailto:hecos.project@gmail.com" style="color: var(--accent);">hecos.project@gmail.com</a></p>
         </footer>
     </div>
 
