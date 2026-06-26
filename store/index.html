@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hecos Store | Package Manager</title>
+    <meta name="description" content="Discover and install modules, plugins, and extensions for Hecos Core.">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="store.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo-sqr.png" alt="Hecos Logo" style="height:28px;width:auto;object-fit:contain;">
+            <span class="logo-text">Hecos Core</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../features.html">Features</a></li>
+                <li><a href="https://github.com/Hecos-Project/Hecos/wiki/00_introduction_en" target="_blank">Docs</a></li>
+                <li><a href="index.html" class="active">Store <span class="version-chip" style="margin-left:4px;">NEW</span></a></li>
+                <li><a href="../download/index.html">Download</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page-wrap">
+
+        <!-- Store Hero -->
+        <section class="store-hero">
+            <h1>Hecos Store</h1>
+            <p class="store-hero-subtitle">
+                Expand your Hecos Core system with official and community-built modules, plugins, themes, and apps.
+            </p>
+        </section>
+
+        <!-- Search & Filters -->
+        <section class="store-controls">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="storeSearch" class="search-input" placeholder="Search packages, features, or authors...">
+            </div>
+            <div class="filter-chips" id="storeFilters">
+                <div class="chip active" data-type="all">All Packages</div>
+                <!-- Types will be populated dynamically -->
+            </div>
+        </section>
+
+        <!-- Packages Grid -->
+        <section id="storeGrid" class="store-grid">
+            <div class="store-loader">
+                <i class="fas fa-circle-notch fa-spin"></i>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="community-links">
+            <a href="https://github.com/Hecos-Project" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://discord.gg/hecos" target="_blank"><i class="fab fa-discord"></i> Discord</a>
+            <a href="https://www.youtube.com/@Hecos-Project" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+        </div>
+        <p>© 2026 Hecos Core Team. Antonio Meloni.</p>
+        <p>Released under Open Source constraints. Local-First AI System.</p>
+    </footer>
+
+    <script src="store.js"></script>
+</body>
+</html>
