@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hecos Web UI | A Visual Tour</title>
+    <meta name="description" content="Take a visual tour of the Hecos Web UI: Chat, Central Hub, Control Room, and Drive.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/tour.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header style="position: sticky; top: 0; z-index: 100;">
+        <a href="index.html" class="logo">
+            <img src="assets/images/logo-sqr.png" alt="Hecos Logo" style="height:28px;width:auto;object-fit:contain;">
+            <span class="logo-text">Hecos Core</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="https://github.com/Hecos-Project/Hecos/wiki/00_introduction_en" target="_blank">Docs</a></li>
+                <li><a href="tour.html" class="active">Tour</a></li>
+                <li><a href="store/index.html">Store</a></li>
+                <li><a href="download/index.html">Download</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Tour Sub-Nav -->
+    <div class="tour-nav">
+        <a href="#intro">Overview</a>
+        <a href="#gateway">Gateway</a>
+        <a href="#chat">Chat & UI</a>
+        <a href="#control-room">Control Room</a>
+        <a href="#hub">Central Hub</a>
+        <a href="#flows">Flows</a>
+        <a href="#drive">Hecos Drive</a>
+    </div>
+
+    <div class="page-wrap" style="padding-top: 0;">
+
+        <!-- Hero -->
+        <section id="intro" class="tour-hero">
+            <h1>The Interface</h1>
+            <p class="tour-hero-subtitle">
+                Hecos is composed of an autonomous CLI Core and the <strong>advanced Hecos WebUI</strong> client. <br>
+                The interface is elegantly divided into four main pillars: <br>
+                <strong>The Chat</strong>, <strong>Central Hub</strong>, <strong>Control Room</strong>, and <strong>Hecos Drive</strong>.
+            </p>
+        </section>
+
+        <!-- PART 1: Gateway -->
+        <section id="gateway" class="tour-section">
+            <div class="tour-container">
+                <div class="tour-header">
+                    <span class="tour-label">1. The Gateway</span>
+                    <h2>Secure & Seamless Access</h2>
+                    <p>Hecos protects your local environment while offering smooth, uninterrupted workflows.</p>
+                </div>
+
+                <div class="feature-block">
+                    <div class="feature-text">
+                        <h3><i class="fas fa-shield-halved"></i> Hecos Portal</h3>
+                        <p>The gateway to your local AI. Enter your credentials to securely access the WebUI from any device on your network. Built with end-to-end local encryption.</p>
+                    </div>
+                    <div class="feature-image">
+                        <img src="assets/images/tour/001_HecosPortal_001.png" alt="Hecos Portal Login">
+                    </div>
+                </div>
+
+                <div class="feature-block reverse">
+                    <div class="feature-text">
+                        <h3><i class="fas fa-globe"></i> Browser Bypass</h3>
+                        <p>When running browser automation flows, Hecos handles complex connections natively. Here, the system intercepts and manages browser dialogs before they interrupt your AI's workflow.</p>
+                    </div>
+                    <div class="feature-image">
+                        <img src="assets/images/tour/002_Hecos_Connection_Browser.png" alt="Browser Connection Bypass">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PART 2: Chat -->
+        <section id="chat" class="tour-section">
+            <div class="tour-container">
+                <div class="tour-header">
+                    <span class="tour-label">2. The Chat</span>
+                    <h2>Your Intelligent Companion</h2>
+                    <p>A masterfully designed interface giving you ultimate control over your AI's personality, backend, and direct system execution.</p>
+                </div>
+
+                <div class="full-showcase">
+                    <img src="assets/images/tour/003_HecosChat_001.png" alt="Hecos Chat Interface">
+                    <h3>The Core Interface</h3>
+                    <p>The main chat window features a comprehensive sidebar. Monitor your active backend, switch Personalities on the fly, toggle the microphone/voice engine, and access the Package Manager (HPM) with a single click.</p>
+                </div>
+
+                <div class="feature-block">
+                    <div class="feature-text">
+                        <h3><i class="fas fa-terminal"></i> Direct Commands</h3>
+                        <p>Bypass the LLM entirely for lightning-fast execution. Use slash commands like <code>/hpm search</code> or system triggers to interact natively with your OS without invoking the AI.</p>
+                    </div>
+                    <div class="feature-image">
+                        <img src="assets/images/tour/004_HecosChat_Direct_Commands.png" alt="Direct Commands Example">
+                    </div>
+                </div>
+
+                <div class="feature-block reverse">
+                    <div class="feature-text">
+                        <h3><i class="fas fa-layer-group"></i> Integrated Control Room</h3>
+                        <p>No need to leave the chat. Open the integrated Control Room overlay to monitor system resources, check active widgets, and manage your agent's live status while continuing your conversation.</p>
+                    </div>
+                    <div class="feature-image">
+                        <img src="assets/images/tour/005_HecosChat_Direct_ControlRoom_integrata.png" alt="Integrated Control Room in Chat">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PART 3: Control Room -->
+        <section id="control-room" class="tour-section">
+            <div class="tour-container">
+                <div class="tour-header">
+                    <span class="tour-label">3. Control Room</span>
+                    <h2>Mission Control</h2>
+                    <p>Monitor your entire hardware and software ecosystem in real-time.</p>
+                </div>
+
+                <div class="full-showcase">
+                    <img src="assets/images/tour/006_Hecos_ControlRoom_Standalone.png" alt="Standalone Control Room">
+                    <h3>Standalone Dashboard</h3>
+                    <p>Pop the Control Room out into a dedicated window. Monitor live CPU/RAM usage, track active AI flows, and manage your widget ecosystem across multiple monitors for a true command-center experience.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PART 4: Central Hub -->
+        <section id="hub" class="tour-section">
+            <div class="tour-container">
+                <div class="tour-header">
+                    <span class="tour-label">4. Central Hub</span>
+                    <h2>The Nerve Center</h2>
+                    <p>Advanced system configuration, designed for power users but intuitive enough for everyone.</p>
+                </div>
+
+                <div class="feature-block">
+                    <div class="feature-text">
+                        <h3><i class="fas fa-sliders"></i> Welcome Screen</h3>
+                        <p>The Central Hub is your configuration paradise. Instantly search for any setting, monitor system health, and quickly navigate to the specific module you want to tweak.</p>
+                    </div>
+                    <div class="feature-image">
+                        <img src="assets/images/tour/007_HecosCentralHub_001.png" alt="Central Hub Welcome">
+                    </div>
+                </div>
+
+                <div class="feature-block reverse">
+                    <div class="feature-text">
+                        <h3><i class="fas fa-filter"></i> Category Menus</h3>
+                        <p>With dozens of built-in modules, the Hub uses a filtered tab system. Easily switch between Core AI settings, Automations, System APIs, and UI customizations without getting lost.</p>
+                    </div>
+                    <div class="feature-image">
+                        <img src="assets/images/tour/008_HecosCentralHub_002.png" alt="Central Hub Menus">
+                    </div>
+                </div>
+
+                <div class="full-showcase">
+                    <img src="assets/images/tour/009_HecosCentralHub_003.png" alt="Central Hub System Section">
+                    <h3>Modular Grid View</h3>
+                    <p>The System section visualizes your installed modules through beautiful interactive cards. Switch effortlessly between the expansive grid view and compact tabs depending on your workflow.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PART 5: Flows -->
+        <section id="flows" class="tour-section">
+            <div class="tour-container">
+                <div class="tour-header">
+                    <span class="tour-label">5. Flows Automation</span>
+                    <h2>Visual Node Programming</h2>
+                    <p>Transform Hecos from a chatbot into a fully autonomous Agentic Layer.</p>
+                </div>
+
+                <div class="full-showcase">
+                    <img src="assets/images/tour/010_Hecos_Flows_001.png" alt="Flows Canvas">
+                    <h3>The Automation Canvas</h3>
+                    <p>Drag and drop nodes from a massive palette to create complex automations. Combine AI logic, Python scripts, and direct OS commands in an intuitive visual editor.</p>
+                </div>
+
+                <div class="feature-block">
+                    <div class="feature-text">
+                        <h3><i class="fas fa-sun"></i> Real-World Routines</h3>
+                        <p>Create powerful chains like the "Morning Routine" flow: trigger at a specific time, fetch the latest news, summarize them via AI, and present the brief in chat when you wake up.</p>
+                    </div>
+                    <div class="feature-image">
+                        <img src="assets/images/tour/011_Hecos_Flows_002.png" alt="Morning Routine Flow">
+                    </div>
+                </div>
+
+                <div class="feature-block reverse">
+                    <div class="feature-text">
+                        <h3><i class="fas fa-code-branch"></i> Interactive Logic</h3>
+                        <p>Flows can pause and wait for user input directly in the chat. Use IF/ELSE nodes to build interactive text-games or decision trees. E.g., "Which door will you open: 1, 2, or 3?"</p>
+                    </div>
+                    <div class="feature-image">
+                        <img src="assets/images/tour/012_Hecos_Flows_003.png" alt="Flows IF/ELSE Logic">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PART 6: Drive -->
+        <section id="drive" class="tour-section">
+            <div class="tour-container">
+                <div class="tour-header">
+                    <span class="tour-label">6. Hecos Drive</span>
+                    <h2>Your Cloud, On Your Hardware</h2>
+                    <p>A powerful built-in file manager giving you remote access to your entire system.</p>
+                </div>
+
+                <div class="full-showcase">
+                    <img src="assets/images/tour/015_Hecos_Drive_FileManager.png" alt="Drive Overview">
+                    <h3>Remote File Access</h3>
+                    <p>Because the WebUI is a network client, Hecos Drive allows you to securely navigate your PC's filesystem from your phone, tablet, or another computer on the same network.</p>
+                </div>
+
+                <div class="feature-block">
+                    <div class="feature-text">
+                        <h3><i class="fas fa-photo-film"></i> Media Gallery</h3>
+                        <p>Not just for files. Drive automatically renders rich thumbnails for images and videos, and features a built-in media player to view your content directly from the browser.</p>
+                    </div>
+                    <div class="feature-image">
+                        <img src="assets/images/tour/016_Hecos_Drive_FileManager_002.png" alt="Drive Media Player">
+                    </div>
+                </div>
+
+                <div class="feature-block reverse">
+                    <div class="feature-text">
+                        <h3><i class="fas fa-file-code"></i> Integrated Code Editor</h3>
+                        <p>Need to tweak a config file or a python script on the go? Open it in Drive's built-in syntax-highlighting editor, modify the code, and save it directly to the host machine.</p>
+                    </div>
+                    <div class="feature-image">
+                        <img src="assets/images/tour/017_Hecos_Drive_FileManager_003_File_Editor.png" alt="Drive File Editor">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="community-links">
+            <a href="https://github.com/Hecos-Project" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://discord.gg/hecos" target="_blank"><i class="fab fa-discord"></i> Discord</a>
+            <a href="https://www.youtube.com/@Hecos-Project" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+        </div>
+        <p>© 2026 Hecos Core Team. Antonio Meloni.</p>
+        <p>Released under Open Source constraints. Local-First AI System.</p>
+    </footer>
+
+</body>
+</html>

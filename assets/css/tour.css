@@ -1,0 +1,243 @@
+/*
+ * Hecos Website — Tour Page Styles
+ * A premium, presentation-style layout for showcasing the Web UI.
+ */
+
+.tour-hero {
+  text-align: center;
+  padding: 80px 20px 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.tour-hero h1 {
+  font-size: clamp(3rem, 7vw, 5rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: var(--accent-g);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+.tour-hero-subtitle {
+  font-size: 1.2rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.tour-hero-subtitle strong {
+  color: var(--text);
+}
+
+/* ── Tour Sections ───────────────────────────────────────────────────────── */
+
+.tour-section {
+  padding: 80px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  position: relative;
+}
+
+.tour-section:last-child {
+  border-bottom: none;
+}
+
+.tour-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Section Header */
+.tour-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.tour-label {
+  display: inline-block;
+  padding: 4px 16px;
+  border-radius: 20px;
+  background: rgba(var(--accent-rgb), 0.1);
+  color: var(--accent);
+  border: 1px solid rgba(var(--accent-rgb), 0.2);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.tour-header h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.tour-header p {
+  font-size: 1.1rem;
+  color: var(--muted);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ── Feature Blocks (Alternating Layout) ─────────────────────────────────── */
+
+.feature-block {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 80px;
+  align-items: center;
+}
+
+.feature-block.reverse {
+  flex-direction: column;
+}
+
+@media (min-width: 900px) {
+  .feature-block {
+    flex-direction: row;
+    gap: 60px;
+  }
+  .feature-block.reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.feature-text {
+  flex: 1;
+  max-width: 500px;
+}
+
+.feature-text h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.feature-text h3 i {
+  color: var(--accent);
+}
+
+.feature-text p {
+  font-size: 1rem;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.feature-text ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.feature-text li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.feature-text li i {
+  color: var(--green);
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.feature-image {
+  flex: 1.5;
+  width: 100%;
+  position: relative;
+}
+
+.feature-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow), 0 20px 40px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-image:hover img {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-glow-active);
+  border-color: rgba(var(--accent-rgb), 0.3);
+}
+
+/* ── Full Width Showcase ─────────────────────────────────────────────────── */
+
+.full-showcase {
+  margin-top: 40px;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.full-showcase img {
+  width: 100%;
+  max-width: 1100px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow), 0 20px 40px rgba(0,0,0,0.6);
+  margin-bottom: 24px;
+}
+
+.full-showcase h3 {
+  font-size: 1.5rem;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.full-showcase p {
+  color: var(--muted);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ── Floating / Sticky Nav for Tour (Optional) ──────────────────────────── */
+.tour-nav {
+  position: sticky;
+  top: 60px;
+  z-index: 90;
+  background: var(--bg-blur);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 0;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.tour-nav a {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--muted);
+  padding: 6px 12px;
+  border-radius: 20px;
+  transition: all 0.2s;
+}
+
+.tour-nav a:hover {
+  color: var(--text);
+  background: rgba(255,255,255,0.05);
+}
