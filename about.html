@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hecos Core | About</title>
+    <meta name="description" content="The Mission & The Creator. Digital Sovereignty with Hecos Core.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        .about-hero {
+            padding: 80px 20px 40px;
+            text-align: center;
+        }
+
+        .about-hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: var(--accent-g);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 12px;
+            line-height: 1.1;
+        }
+
+        .about-hero-subtitle {
+            font-size: var(--font-size-base);
+            color: var(--muted);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .creator-section {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            max-width: 1000px;
+            margin: 60px auto;
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 40px;
+            box-shadow: var(--shadow);
+            align-items: center;
+        }
+
+        @media (min-width: 800px) {
+            .creator-section {
+                flex-direction: row;
+                gap: 60px;
+            }
+        }
+
+        .creator-image {
+            flex: 1;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .creator-image img {
+            width: 100%;
+            border-radius: 12px;
+            border: 2px solid rgba(108,140,255,0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5), 0 0 20px rgba(108,140,255,0.15);
+            object-fit: cover;
+        }
+
+        .creator-text {
+            flex: 1.5;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .creator-text h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--text);
+            margin-bottom: 8px;
+        }
+        
+        .creator-text h3 {
+            font-size: 1.1rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .creator-text p {
+            font-size: 1.05rem;
+            color: var(--muted);
+            line-height: 1.8;
+        }
+
+        .creator-text p strong {
+            color: var(--text);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header style="position: sticky; top: 0; z-index: 100;">
+        <a href="index.html" class="logo">
+            <img src="assets/images/logo-sqr.png" alt="Hecos Logo" style="height:28px;width:auto;object-fit:contain;">
+            <span class="logo-text">Hecos Core</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tour.html">Tour</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="https://github.com/Hecos-Project/Hecos/wiki/00_introduction_en" target="_blank">Docs</a></li>
+                <li><a href="store/index.html">Store</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="download/index.html">Download</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page-wrap">
+        <section class="about-hero">
+            <h1>The Sovereign Vision</h1>
+            <p class="about-hero-subtitle">
+                A private, local alternative where the user is the only master of their data.
+            </p>
+        </section>
+
+        <section class="creator-section">
+            <div class="creator-image">
+                <img src="assets/images/Antonio_Meloni_Hecos_Admin.jpg" alt="Antonio Meloni (Tony) - Creator of Hecos">
+            </div>
+            
+            <div class="creator-text">
+                <h2>The Mission & The Creator</h2>
+                <h3>Digital Sovereignty</h3>
+                
+                <p>
+                    Hecos Core was born from a simple but powerful idea: <strong>Digital Sovereignty</strong>. In a world where AI is increasingly centralized and cloud-monitored, Hecos offers a private, local alternative where the user is the only master of their data.
+                </p>
+                <p>
+                    <strong>Hecos is Local-First.</strong> Your entire knowledge base — emails, contacts, and RAG databases — resides strictly on your machine. If you choose to use a Cloud model for more power, Hecos only sends the specific prompt via secure API channels, preventing your sensitive business data from being used to train Big Tech models.
+                </p>
+                <p>
+                    Created by <strong>Antonio Meloni (Tony)</strong>, Hecos is a labor of love for the Sovereign AI community. It is designed for those who believe that intelligence should live on the user's hardware, not on a remote server. Hecos is more than an agent; it is a native operating layer that bridges high-level reasoning with root-level system execution.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="community-links">
+            <a href="https://github.com/Hecos-Project" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://discord.gg/hecos" target="_blank"><i class="fab fa-discord"></i> Discord</a>
+            <a href="https://www.youtube.com/@Hecos-Project" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+        </div>
+        <p>© 2026 Hecos Core Team. Antonio Meloni.</p>
+        <p>Released under Open Source constraints. Local-First AI System.</p>
+    </footer>
+
+</body>
+</html>
