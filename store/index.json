@@ -100,6 +100,29 @@
       "homepage": "https://hecos-project.github.io/store/#webcam_widget",
       "fa_icon": "fa-camera",
       "featured": false
+    },
+    {
+      "id": "quick_links",
+      "name": "Quick Links",
+      "type": "widget",
+      "level": 5,
+      "version": "1.0.0",
+      "author": "Antonio Meloni",
+      "description": "A user-managed sidebar widget to store and quickly access your favorite links.",
+      "tags": [
+        "widget",
+        "links",
+        "shortcuts",
+        "utility"
+      ],
+      "download_url": "https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/packages/quick_links-1.0.0.hpkg",
+      "size_bytes": 14634,
+      "sha256": "52cfbf896c56b60bfa680cf7bf82e2aa72f16a8e611b9e0f046debee4822e781",
+      "screenshots": [],
+      "changelog": "v1.0.0: Initial extraction into autonomous package.",
+      "homepage": "https://hecos-project.github.io/store/#quick_links",
+      "fa_icon": "fa-bolt",
+      "featured": false
     }
   ]
 }
