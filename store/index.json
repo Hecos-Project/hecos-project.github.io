@@ -1,7 +1,7 @@
 {
   "version": "1",
   "catalog_url": "https://hecos-project.github.io/store/index.json",
-  "generated_at": "2026-06-30T09:51:05Z",
+  "generated_at": "2026-06-30T09:59:31Z",
   "packages": [
     {
       "id": "calendar",
@@ -73,10 +73,10 @@
       "description": "Schedule time-based reminders with TTS alerts and WebUI notifications. Supports natural language and recurring CRON expressions.",
       "tags": [],
       "download_url": "https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/packages/reminder-1.0.2.hpkg",
-      "size_bytes": 31999,
-      "sha256": "bd8d23ba9e1139e95ab19a1d63ca4f9a1794d19720890830bc3007c41b151597",
+      "size_bytes": 841633,
+      "sha256": "c13eae6b83f0c1cf995c0b7adc806c73be7eb0f56819e651a72b6a85947217f2",
       "screenshots": [
-        "https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/Hecos_module_Image_preview.png"
+        "https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/reminder_src/preview.png"
       ],
       "changelog": "Aggiornamento automatico generato dallo Store Catalog Builder.",
       "homepage": "https://hecos-project.github.io/store/#reminder",
