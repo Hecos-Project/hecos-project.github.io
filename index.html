@@ -27,7 +27,7 @@
       "applicationCategory": "AI Operating Layer",
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
       "description": "Hecos Core: Helping Companion System. A native modular AI Operating Layer.",
-      "softwareVersion": "0.26.0"
+      "softwareVersion": "0.36.0"
     }
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -78,9 +78,20 @@
                 <img src="assets/images/tour/Hecos_ImageGen_Module_1.png" alt="Hecos WebUI Chat Interface Preview" style="width: 100%; height: auto; border-radius: 8px; border: 1px solid rgba(108,140,255,0.2); box-shadow: 0 0 24px rgba(108,140,255,0.15); display: block;">
             </div>
 
+            <!-- Non-Technical Overview -->
             <div class="about-card" style="margin-top: 25px; text-align: left; max-width: 700px; margin-left: auto; margin-right: auto; padding: 20px; border-left: 4px solid #6c8cff; background: rgba(255,255,255,0.03); border-radius: 0 8px 8px 0;">
                 <p style="margin: 0; font-size: 15px; line-height: 1.6;">
                     💡 <strong>Hecos is your everyday companion.</strong> You can talk to it about whatever you want; it can control your computer, send messages, and with its native personality-switching feature, it can act as a butler, a friend, or even your virtual partner. Need it to work without AI? No problem — Hecos runs powerful automation flows, responds to direct commands, and manages your calendar, reminders, and lists completely on its own.
+                </p>
+            </div>
+
+            <!-- Technical Overview (Under the Hood) -->
+            <div class="tech-spec-card" style="margin-top: 20px; text-align: left; max-width: 700px; margin-left: auto; margin-right: auto; padding: 20px; border-left: 4px solid #a855f7; background: rgba(255,255,255,0.02); border-radius: 0 8px 8px 0;">
+                <p style="margin: 0; font-size: 14px; line-height: 1.6; font-family: 'Inter', sans-serif;">
+                    🛠️ <strong>Under the Hood (For Developers & Power Users):</strong> Now advancing through <span class="version-chip" style="background: rgba(168,85,247,0.2); color: #c084fc; border: 1px solid rgba(168,85,247,0.3);">v0.36.0 Alpha</span>, Hecos has evolved into a fully fledged, distributed modular platform. The ecosystem features a decoupled <strong>Client-Server architecture</strong> consisting of a headless CLI Core (the backend server) and an advanced WebUI (the client). The system synchronizes an interactive Chat view, a real-time **Control Room** powered by live telemetry widgets, and **Hecos Flows**—a visual automation engine that executes workflows with or without LLM overhead. 
+                </p>
+                <p style="margin: 10px 0 0 0; font-size: 14px; line-height: 1.6; font-family: 'Inter', sans-serif;">
+                    Infrastructure utilities include a unified configuration panel (**Central Hub**), a secure remote file manager, an integrated proxy routing system, granular **Direct Commands**, dynamic Voice/VAD pipelines, and a centralized backup engine. Extensions are handled natively through the **Hecos Package Manager (HPM)**, fetching standalone `.hpkg` components (Core patches, Plugins, Widgets, Themes, or Soul matrices) directly from the newly integrated **Hecos Store**.
                 </p>
             </div>
 
