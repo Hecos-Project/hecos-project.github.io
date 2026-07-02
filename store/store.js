@@ -344,21 +344,48 @@ function _hpmCarouselRender() {
   const thumbs  = document.getElementById('hpm-carousel-thumbs');
   if (!img) return;
 
-  img.src = images[index];
-  const multi = images.length > 1;
+  const currentSrc = images[index];
+  img.src = currentSrc;
 
+  // Show animated GIF badge on main image
+  const isGif = currentSrc.toLowerCase().endsWith('.gif');
+  let gifBadge = document.getElementById('hpm-carousel-gif-badge');
+  if (isGif) {
+    if (!gifBadge) {
+      gifBadge = document.createElement('div');
+      gifBadge.id = 'hpm-carousel-gif-badge';
+      gifBadge.style.cssText = 'position:absolute;top:10px;left:10px;background:rgba(0,0,0,.7);color:#fff;font-size:0.65em;font-weight:700;letter-spacing:.5px;padding:2px 7px;border-radius:8px;pointer-events:none;';
+      gifBadge.textContent = 'GIF';
+      img.parentElement.style.position = 'relative';
+      img.parentElement.appendChild(gifBadge);
+    }
+    gifBadge.style.display = 'block';
+  } else if (gifBadge) {
+    gifBadge.style.display = 'none';
+  }
+
+  const multi = images.length > 1;
   if (counter) { counter.textContent = `${index + 1} / ${images.length}`; counter.style.display = multi ? 'block' : 'none'; }
   if (prev)    { prev.style.display  = multi ? 'flex' : 'none'; }
   if (next)    { next.style.display  = multi ? 'flex' : 'none'; }
 
   if (thumbs) {
     if (multi) {
-      thumbs.innerHTML = images.map((src, i) => `
-        <img src="${_hesc(src)}" onclick="_hpmCarouselGoto(${i})"
-             style="width:74px;height:46px;object-fit:cover;border-radius:6px;cursor:pointer;flex-shrink:0;
+      thumbs.innerHTML = images.map((src, i) => {
+        const thumbGif = src.toLowerCase().endsWith('.gif');
+        // For GIFs: use <img> tag so they animate; for statics: also use <img>
+        // object-fit:cover clips GIFs nicely; the animation runs natively in <img>
+        return `
+        <div onclick="_hpmCarouselGoto(${i})"
+             style="width:74px;height:46px;border-radius:6px;cursor:pointer;flex-shrink:0;overflow:hidden;position:relative;
                     border:2px solid ${i === index ? 'var(--accent)' : 'rgba(255,255,255,.12)'};
-                    opacity:${i === index ? '1' : '0.5'};transition:opacity .2s,border-color .2s;"
-             onerror="this.style.display='none'">`).join('');
+                    opacity:${i === index ? '1' : '0.55'};transition:opacity .2s,border-color .2s;">
+          <img src="${_hesc(src)}"
+               style="width:100%;height:100%;object-fit:cover;display:block;"
+               onerror="this.parentElement.style.display='none'">
+          ${thumbGif ? `<div style="position:absolute;bottom:2px;right:3px;background:rgba(0,0,0,.75);color:#fff;font-size:0.55em;font-weight:700;padding:1px 4px;border-radius:4px;pointer-events:none;">GIF</div>` : ''}
+        </div>`;
+      }).join('');
     } else {
       thumbs.innerHTML = '';
     }
