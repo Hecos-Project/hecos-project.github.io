@@ -1,7 +1,7 @@
 {
   "version": "1",
   "catalog_url": "https://hecos-project.github.io/store/index.json",
-  "generated_at": "2026-07-02T09:35:55Z",
+  "generated_at": "2026-07-02T10:10:57Z",
   "packages": [
     {
       "id": "calendar",
@@ -129,14 +129,16 @@
       "type": "widget",
       "level": 5,
       "version": "1.0.0",
-      "author": "Hecos Team",
+      "author": "Antonio Meloni",
       "description": "Retro-80s voice animation. Shows KITT-style scanner or a pixelated talking mouth when Hecos speaks.",
       "tags": [],
       "download_url": "https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/packages/voice_visualizer-1.0.0.hpkg",
-      "size_bytes": 11614,
-      "sha256": "0a7d0500ebded2bea67d124c2dd9171e9ca1091a7844468b9e0e2c3e3366656b",
+      "size_bytes": 1275230,
+      "sha256": "50c4a012a5cacd96b459e54f5f53255600968eaf690434f95e7cf8aa5db55ebc",
       "screenshots": [
-        "https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/Hecos_module_Image_preview.png"
+        "https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/voice_visualizer_src/preview_1.png",
+        "https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/voice_visualizer_src/preview_2.png",
+        "https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/voice_visualizer_src/preview_3.png"
       ],
       "changelog": "Aggiornamento automatico generato dallo Store Catalog Builder.",
       "homepage": "https://hecos-project.github.io/store/#voice_visualizer",
