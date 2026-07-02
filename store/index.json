@@ -1,7 +1,7 @@
 {
   "version": "1",
   "catalog_url": "https://hecos-project.github.io/store/index.json",
-  "generated_at": "2026-07-02T10:10:57Z",
+  "generated_at": "2026-07-02T11:47:55Z",
   "packages": [
     {
       "id": "calendar",
@@ -134,7 +134,7 @@
       "tags": [],
       "download_url": "https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/packages/voice_visualizer-1.0.0.hpkg",
       "size_bytes": 1275230,
-      "sha256": "50c4a012a5cacd96b459e54f5f53255600968eaf690434f95e7cf8aa5db55ebc",
+      "sha256": "1cf675947fc9939a7fc4df7c69844a35902ab02433bb97c3cc12f293ad4c639b",
       "screenshots": [
         "https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/voice_visualizer_src/preview_1.png",
         "https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/voice_visualizer_src/preview_2.png",
