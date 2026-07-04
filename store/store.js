@@ -458,7 +458,50 @@ window.hpmStoreShowReadMe = async function (pkgId) {
   }
 
   modal.style.display = 'flex';
-  content.innerHTML   = '<div style="text-align:center;padding:30px;"><i class="fas fa-spinner fa-spin fa-2x" style="opacity:.35;"></i></div>';
+
+  // ── Capabilities block (shown immediately, before README loads) ────────────
+  const cap = pkg.capabilities || {};
+  const hasAnyCap = cap.has_widget || cap.has_config_panel || cap.has_api_routes || cap.has_system_calls
+                    || (cap.llm_tools && cap.llm_tools.length) || (cap.slash_commands && cap.slash_commands.length);
+
+  let capHtml = '';
+  if (hasAnyCap) {
+    const badge = (icon, label, active, color='#10b981') =>
+      `<span style="display:inline-flex;align-items:center;gap:5px;font-size:0.72em;font-weight:600;padding:4px 10px;
+              border-radius:20px;border:1px solid ${active ? color+'55' : 'rgba(255,255,255,.1)'};
+              background:${active ? color+'18' : 'transparent'};color:${active ? color : 'var(--muted)'};opacity:${active ? '1' : '.4'};">
+        <i class="fas ${icon}" style="font-size:0.9em;"></i>${label}</span>`;
+
+    const pill = (text, bg, color, border) =>
+      `<span style="font-size:0.72em;padding:3px 9px;border-radius:12px;
+              background:${bg};color:${color};border:1px solid ${border};font-weight:500;">${_hesc(text)}</span>`;
+
+    capHtml = `
+      <div style="padding:16px 28px 0; border-bottom:1px solid var(--border); margin-bottom:0;">
+        <div style="font-size:0.72em;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">
+          <i class="fas fa-microchip" style="margin-right:5px;opacity:.5;"></i>Capabilities
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:7px;margin-bottom:12px;">
+          ${badge('fa-th-large',     'Widget',       cap.has_widget,       '#f59e0b')}
+          ${badge('fa-sliders-h',    'Config Panel', cap.has_config_panel, '#3b82f6')}
+          ${badge('fa-route',        'API Routes',   cap.has_api_routes,   '#8b5cf6')}
+          ${badge('fa-terminal',     'System Calls', cap.has_system_calls, '#ef4444')}
+        </div>
+        ${cap.llm_tools && cap.llm_tools.length ? `
+          <div style="display:flex;flex-wrap:wrap;gap:5px;align-items:center;margin-bottom:10px;">
+            <span style="font-size:0.7em;color:var(--muted);margin-right:4px;font-weight:600;">LLM Tools:</span>
+            ${cap.llm_tools.map(t => pill(t, 'rgba(59,130,246,.12)', '#60a5fa', 'rgba(59,130,246,.3)')).join('')}
+          </div>` : ''}
+        ${cap.slash_commands && cap.slash_commands.length ? `
+          <div style="display:flex;flex-wrap:wrap;gap:5px;align-items:center;margin-bottom:10px;">
+            <span style="font-size:0.7em;color:var(--muted);margin-right:4px;font-weight:600;">Slash Commands:</span>
+            ${cap.slash_commands.map(c => pill(c, 'rgba(236,72,153,.12)', '#f472b6', 'rgba(236,72,153,.3)')).join('')}
+          </div>` : ''}
+        ${cap.notes ? `<div style="font-size:0.76em;color:var(--muted);line-height:1.5;padding:8px 0;border-top:1px solid rgba(255,255,255,.05);">${_hesc(cap.notes)}</div>` : ''}
+      </div>`;
+  }
+
+  content.innerHTML = capHtml + '<div style="text-align:center;padding:30px;"><i class="fas fa-spinner fa-spin fa-2x" style="opacity:.35;"></i></div>';
 
   let mdText = null;
   try {
@@ -477,8 +520,8 @@ window.hpmStoreShowReadMe = async function (pkgId) {
 
   if (mdText) {
     if (typeof marked !== 'undefined') {
-      content.innerHTML = `
-        <div class="hpm-readme-body" style="--hpm-c:${meta.color};">
+      content.innerHTML = capHtml + `
+        <div class="hpm-readme-body" style="--hpm-c:${meta.color}; padding:22px 28px 4px;">
           ${marked.parse(mdText)}
         </div>
         <style>
@@ -501,7 +544,7 @@ window.hpmStoreShowReadMe = async function (pkgId) {
           .hpm-readme-body li{margin:3px 0;}
         </style>`;
     } else {
-      content.innerHTML = `<pre style="white-space:pre-wrap;font-family:inherit;font-size:0.87em;line-height:1.6;">${_hesc(mdText)}</pre>`;
+      content.innerHTML = capHtml + `<pre style="white-space:pre-wrap;font-family:inherit;font-size:0.87em;line-height:1.6;padding:22px 28px;">${_hesc(mdText)}</pre>`;
     }
   } else {
     const noDocTitle = _t('No documentation available', 'Nessuna documentazione disponibile', 'Sin documentación disponible');
