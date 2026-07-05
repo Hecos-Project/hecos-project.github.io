@@ -1,7 +1,7 @@
 {
   "version": "1",
   "catalog_url": "https://hecos-project.github.io/store/index.json",
-  "generated_at": "2026-07-05T05:27:51Z",
+  "generated_at": "2026-07-05T06:28:50Z",
   "packages": [
     {
       "id": "calendar",
@@ -14,7 +14,7 @@
       "tags": [],
       "download_url": "https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/packages/calendar-1.0.3.hpkg",
       "size_bytes": 890333,
-      "sha256": "b9476e2ceb9827405fee413a8daea18cf9c0788ccb43eb0643ed8dba7cb42164",
+      "sha256": "8091ac932a9dfe16e1999bb9f55bb13f89be59f313355ab1adcffa1508eff58a",
       "screenshots": [
         "https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/calendar_src/preview.png"
       ],
@@ -57,8 +57,8 @@
       "description": "AI Image Generation - Generates images from text prompts using multiple providers (Pollinations, Gemini, OpenAI DALL-E, Stability AI, HuggingFace). Fully autonomous package with its own TOML configuration. The easiest way to get started is to select Hugging Face as the provider and use one or more API keys, which you can obtain by logging in with an account.",
       "tags": [],
       "download_url": "https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/packages/image_gen-1.0.8.hpkg",
-      "size_bytes": 535896,
-      "sha256": "8ff4aa30dcbd9ec34bb4df40124a761c7772d496e8894128a24faaf909acda9e",
+      "size_bytes": 535872,
+      "sha256": "f259fda50b2db8563e34fa443af162978e03320e9d05d3139e79734d24e89ec8",
       "screenshots": [
         "https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/image_gen_src/preview.png"
       ],
@@ -86,8 +86,7 @@
       "pip_requirements": [
         "requests",
         "httpx",
-        "openai",
-        "googletrans==4.0.0-rc1"
+        "openai"
       ]
     },
     {
@@ -101,7 +100,7 @@
       "tags": [],
       "download_url": "https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/packages/lists-2.0.0.hpkg",
       "size_bytes": 937855,
-      "sha256": "9eca007d91fc421dad7e5d81c9c92bdd3126793e05efee68c98c62e2e9cf6713",
+      "sha256": "c9bc24a2fe5b734f8af880f7dc1b0164dcdfd6daa60f4ee6d8f28312ed670d77",
       "screenshots": [
         "https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/lists_src/preview.png"
       ],
@@ -150,7 +149,7 @@
       "tags": [],
       "download_url": "https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/packages/map-1.0.1.hpkg",
       "size_bytes": 447404,
-      "sha256": "739184c991851f68262b29b8fdf0352006566a4ae45dc832fb0f69ffea9c9522",
+      "sha256": "f9420c1eca9d4218bf7e407e5b8de3cb132b41cee0dd6b6a501e71951bd07cc5",
       "screenshots": [
         "https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/map_src/preview.png"
       ],
@@ -186,7 +185,7 @@
       "tags": [],
       "download_url": "https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/packages/quick_links-1.0.0.hpkg",
       "size_bytes": 8105,
-      "sha256": "cfd070d2f1fd14451b3d08d0a9324cf00c4976eccf1c1d45b55472b5e627dc80",
+      "sha256": "d29affa2d45d897e92040ee941f7684177fd63044eb243e4d3ac45228003ae24",
       "screenshots": [
         "https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/Hecos_module_Image_preview.png"
       ],
@@ -217,7 +216,7 @@
       "tags": [],
       "download_url": "https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/packages/reminder-1.0.2.hpkg",
       "size_bytes": 841770,
-      "sha256": "919a4b49dfcd6bf08296091bdcb83bb5e16ce55f0867e26d1463e6d6049111fa",
+      "sha256": "8b04157336db69d77c1e59c0e1aae4fc1855b9f259c4e94003b35f1b5fe49274",
       "screenshots": [
         "https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/reminder_src/preview.png"
       ],
@@ -261,7 +260,7 @@
       "tags": [],
       "download_url": "https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/packages/voice_visualizer-1.0.2.hpkg",
       "size_bytes": 1275498,
-      "sha256": "e95f5d4af2426f5d18c01f93a1e12b49841e965e8404cb2591a451a53c0f56d3",
+      "sha256": "a7a1300b9eee21fca96f60bab0e5d2982983ba4fc963087e4dd1ce27867999f1",
       "screenshots": [
         "https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/voice_visualizer_src/preview_1.png",
         "https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/voice_visualizer_src/preview_2.png",
@@ -294,7 +293,7 @@
       "tags": [],
       "download_url": "https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/packages/weather_pro-1.0.1.hpkg",
       "size_bytes": 15156,
-      "sha256": "fbf1c5c678976fc84cb1e5e714b916198a4cbeaf98fab94a1a7a5164ab75b877",
+      "sha256": "d21db9b0e4e2e4fbb5c36909c5eb3858f8f0358e4868a60dae2c5cc7fdb00875",
       "screenshots": [
         "https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/Hecos_module_Image_preview.png"
       ],
@@ -328,7 +327,7 @@
       "tags": [],
       "download_url": "https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/packages/webcam-1.0.2.hpkg",
       "size_bytes": 6356,
-      "sha256": "9bd02388b12e2d940c1f94bf0e9d2d955a6acb30590f1cdd631f7c21e5b25b0a",
+      "sha256": "dee40aff0abba74d7cbf0c45ed6317421b5061b3e72e636a6cd0074e81c651a5",
       "screenshots": [
         "https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/Hecos_module_Image_preview.png"
       ],
@@ -366,7 +365,7 @@
       "tags": [],
       "download_url": "https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/packages/webcam_feed-1.0.1.hpkg",
       "size_bytes": 859140,
-      "sha256": "c0e51da2e5403cb965f080d171145a832cad525d6017ce92737687f282bf498e",
+      "sha256": "7e6e9c01cd6071f59c7b2fab1e05ce81d2c4127623d2d37d8054a905420e39b4",
       "screenshots": [
         "https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/webcam_feed_src/preview.png"
       ],
