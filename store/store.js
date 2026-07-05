@@ -436,6 +436,21 @@ window.hpmStoreShowReadMe = async function (pkgId) {
           <div style="display:flex;gap:5px;flex-wrap:wrap;margin-top:8px;">
             ${pkg.tags.map(t => `<span style="font-size:0.67em;background:rgba(255,255,255,.07);color:var(--muted);padding:2px 7px;border-radius:5px;">#${_hesc(t)}</span>`).join('')}
           </div>` : ''}
+        ${(pkg.dependencies && pkg.dependencies.length > 0) || (pkg.pip_requirements && pkg.pip_requirements.length > 0) ? `
+          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px;padding-top:10px;border-top:1px solid rgba(255,255,255,0.05);">
+            ${pkg.dependencies && pkg.dependencies.length ? `
+              <div style="font-size:0.72em;color:var(--muted);display:flex;align-items:center;gap:6px;">
+                <i class="fas fa-boxes" style="color:#3b82f6;"></i>
+                <span style="font-weight:600;opacity:0.7;">${_t('Depends on:','Dipende da:','Depende de:')}</span>
+                ${pkg.dependencies.map(d => `<span style="background:rgba(59,130,246,0.15);color:#60a5fa;padding:2px 6px;border-radius:4px;font-weight:600;">${_hesc(d)}</span>`).join('')}
+              </div>` : ''}
+            ${pkg.pip_requirements && pkg.pip_requirements.length ? `
+              <div style="font-size:0.72em;color:var(--muted);display:flex;align-items:center;gap:6px;">
+                <i class="fab fa-python" style="color:#f59e0b;"></i>
+                <span style="font-weight:600;opacity:0.7;">PIP:</span>
+                ${pkg.pip_requirements.map(p => `<span style="background:rgba(245,158,11,0.15);color:#fbbf24;padding:2px 6px;border-radius:4px;font-weight:600;">${_hesc(p.split('==')[0].split('>=')[0])}</span>`).join('')}
+              </div>` : ''}
+          </div>` : ''}
       </div>
     </div>`;
 
