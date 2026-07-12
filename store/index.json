@@ -1,7 +1,7 @@
 {
   "version": "1",
   "catalog_url": "https://hecos-project.github.io/store/index.json",
-  "generated_at": "2026-07-12T14:22:18Z",
+  "generated_at": "2026-07-12T14:34:26Z",
   "packages": [
     {
       "id": "calendar",
@@ -276,10 +276,10 @@
       "description": "Send and receive messages via Telegram, WhatsApp, and Discord.\n\n**Guida ai Comandi Rapidi:**\n- `/msg <piattaforma>:<destinatario> <testo>`: Invia un messaggio diretto scavalcando l'IA. Es: `/msg whatsapp:+393331234567 Ciao!`\n- `/send`: Alias esatto di `/msg`.\n",
       "tags": [],
       "download_url": "https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/packages/messenger-1.0.2.hpkg",
-      "size_bytes": 2264709,
-      "sha256": "afd6f40745373471467a2f8e79b873ca691ce95f9332dd96d2e7a82802635c26",
+      "size_bytes": 2264719,
+      "sha256": "f05d51701deacc6e7dd064028b9c01077b5dd685909cb387c9d798f80973dde1",
       "screenshots": [
-        "https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/messenger_src/preview.png"
+        "https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/messenger_src/preview_1.png"
       ],
       "changelog": "Aggiornamento automatico generato dallo Store Catalog Builder.",
       "homepage": "https://hecos-project.github.io/store/#messenger",
