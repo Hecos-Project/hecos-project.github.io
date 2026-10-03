@@ -1,7 +1,7 @@
 {
   "version": "1",
   "catalog_url": "https://hecos-project.github.io/store/index.json",
-  "generated_at": "2026-10-03T09:40:17Z",
+  "generated_at": "2026-10-03T09:53:39Z",
   "packages": [
     {
       "id": "org.hecos.testbuilder",
@@ -573,13 +573,13 @@
       "name": "Atlas Man",
       "type": "persona",
       "level": 5,
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": "Antonio Meloni",
       "description": "Persona pack: Atlas Man",
       "tags": [],
-      "download_url": "https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/packages/personas/Atlas_Man-1.0.0.hpkg",
-      "size_bytes": 3370800,
-      "sha256": "ac1f49015f56e54727b54e867a814dcc82dfd61d0d9ceb325e6adc5a25b2040d",
+      "download_url": "https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/packages/personas/atlas_man-1.0.1.hpkg",
+      "size_bytes": 2387177,
+      "sha256": "57e007d36d54bbcedd26c0bf4451ba99329020677c255a452073bf11496a0592",
       "screenshots": [
         "https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/sources/personas/Atlas_Man_src/preview_1.png"
       ],
