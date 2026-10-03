@@ -1,7 +1,7 @@
 {
   "version": "1",
   "catalog_url": "https://hecos-project.github.io/store/index.json",
-  "generated_at": "2026-10-03T09:01:12Z",
+  "generated_at": "2026-10-03T09:06:26Z",
   "packages": [
     {
       "id": "org.hecos.testbuilder",
@@ -640,8 +640,8 @@
       "description": "Persona pack: Motoko Kusanagi",
       "tags": [],
       "download_url": "https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/packages/personas/motoko_kusanagi-1.0.1.hpkg",
-      "size_bytes": 1457302,
-      "sha256": "2d6b2cd72ddb5793d68d07095d91016a8532e03c4f495e984ba5a29ee9aafe66",
+      "size_bytes": 1457544,
+      "sha256": "4c9396e60ce9ee1319eff38b287bd5a70288ce6707111068f8aab9129c5a8194",
       "screenshots": [
         "https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/sources/personas/Motoko_Kusanagi_src/preview_1.png"
       ],
