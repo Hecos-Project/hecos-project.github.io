@@ -78,7 +78,10 @@ function buildFilters() {
   STATE.packages.forEach(p => { counts[p.type] = (counts[p.type] || 0) + 1; });
 
   container.innerHTML = types.map(type => {
-    const meta = TYPE_META[type] || { label: type, icon: 'fa-cube', color: '#6b7280' };
+    let meta = TYPE_META[type];
+    if (!meta) {
+      meta = { label: type.charAt(0).toUpperCase() + type.slice(1), icon: 'fa-folder-open', color: '#14b8a6' };
+    }
     const count = type === 'all' ? STATE.packages.length : (counts[type] || 0);
     const isActive = STATE.currentFilter === type;
     return `
@@ -166,7 +169,9 @@ function renderGrid() {
 }
 
 function _hpmStoreRenderCard(pkg) {
-  const meta = TYPE_META[pkg.type] || { label: pkg.type, icon: 'fa-cube', color: '#6b7280' };
+  const pcat = (pkg.category && pkg.category.trim() !== "") ? pkg.category.toLowerCase() : pkg.type;
+  let meta = TYPE_META[pcat];
+  if (!meta) meta = { label: pcat.charAt(0).toUpperCase() + pcat.slice(1), icon: 'fa-folder-open', color: '#14b8a6' };
   const sizeFmt = pkg.size_bytes ? `${(pkg.size_bytes / 1024).toFixed(1)} KB` : '';
   const icon = pkg.fa_icon || 'fa-cube';
   const fallbackIcon = 'https://raw.githubusercontent.com/Hecos-Project/Hecos-Packages/main/Hecos_module_Image_preview_square.png';
