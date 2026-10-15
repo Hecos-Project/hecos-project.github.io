@@ -82,7 +82,7 @@
 
 .chip {
   padding: 6px 14px;
-  border-radius: 20px;
+  border-radius: 8px;
   font-size: var(--font-size-sm);
   font-weight: 600;
   cursor: pointer;
@@ -155,7 +155,7 @@
   font-weight: 800;
   text-transform: uppercase;
   padding: 3px 8px;
-  border-radius: 6px;
+  border-radius: 20px;
   background: rgba(var(--accent-rgb), 0.1);
   color: var(--accent);
   border: 1px solid rgba(var(--accent-rgb), 0.2);
@@ -199,7 +199,7 @@
   align-items: center;
   background: var(--bg);
   border: 1px solid var(--border);
-  border-radius: 6px;
+  border-radius: 8px;
   padding: 8px 12px;
   gap: 10px;
 }

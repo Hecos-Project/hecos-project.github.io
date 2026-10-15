@@ -86,13 +86,13 @@ function buildFilters() {
     const isActive = STATE.currentFilter === type;
     return `
       <div class="chip ${isActive ? 'active' : ''}" data-type="${type}"
-           style="display:inline-flex;align-items:center;gap:6px;font-size:0.8em;padding:6px 14px;border-radius:20px;cursor:pointer;
+           style="display:inline-flex;align-items:center;gap:6px;font-size:0.8em;padding:6px 14px;border-radius:8px;cursor:pointer;
                   background:${isActive ? 'rgba(0,217,178,0.15)' : 'var(--bg)'};
                   border:1px solid ${isActive ? 'var(--accent)' : 'var(--border)'};
                   color:${isActive ? 'var(--accent)' : 'var(--muted)'};">
         ${type !== 'all' ? `<i class="fas ${meta.icon}" style="color:${isActive ? 'var(--accent)' : meta.color};"></i>` : '<i class="fas fa-border-all"></i>'}
         ${type === 'all' ? 'All Packages' : meta.label}
-        <span style="background:rgba(255,255,255,0.1);padding:1px 6px;border-radius:10px;font-size:0.85em;">${count}</span>
+        <span style="background:rgba(255,255,255,0.1);padding:1px 6px;border-radius:20px;font-size:0.85em;">${count}</span>
       </div>`;
   }).join('');
   
@@ -184,7 +184,7 @@ function _hpmStoreRenderCard(pkg) {
 
   // Direct Command Box for the website
   const installCmdHtml = `
-    <div style="display:flex;align-items:center;background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:6px 10px;gap:8px;width:100%;">
+    <div style="display:flex;align-items:center;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:6px 10px;gap:8px;width:100%;">
       <div id="cmd-${pkg.id}" style="font-family:var(--font-mono);font-size:0.75em;color:var(--accent2);flex-grow:1;user-select:all;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">/hpm install ${pkg.id}</div>
       <button onclick="copyCmd('cmd-${pkg.id}')" style="background:transparent;border:none;color:var(--muted);cursor:pointer;padding:4px;display:flex;align-items:center;justify-content:center;transition:color 0.2s;" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'" title="Copy command">
         <i class="far fa-copy"></i>
@@ -207,7 +207,7 @@ function _hpmStoreRenderCard(pkg) {
         <div style="flex:1;min-width:0;">
           <div style="font-weight:700;color:var(--text);font-size:0.95em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${_hesc(pkg.name)}</div>
           <div style="display:flex;align-items:center;gap:6px;margin-top:3px;flex-wrap:wrap;">
-            <span style="font-size:0.7em;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:${meta.color};background:${meta.color}18;padding:2px 7px;border-radius:5px;">${meta.label}</span>
+            <span style="font-size:0.72em;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:${meta.color};background:${meta.color}18;padding:2px 8px;border-radius:20px;border:1px solid ${meta.color}44;display:inline-flex;align-items:center;line-height:1.2;">${meta.shortLabel || meta.label}</span>
             <span style="font-size:0.72em;color:var(--muted);">v${_hesc(pkg.version)}</span>
             ${sizeFmt ? `<span style="font-size:0.7em;color:var(--muted);">${sizeFmt}</span>` : ''}
           </div>
@@ -221,7 +221,7 @@ function _hpmStoreRenderCard(pkg) {
         <img src="${_hesc(screenshots[0])}" style="width:100%;height:100%;object-fit:contain;padding:8px;box-sizing:border-box;
              transition:transform 0.3s ease;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"
              loading="lazy" onerror="this.parentElement.style.display='none'">
-        ${hasMultiple ? `<div style="position:absolute;bottom:7px;right:9px;background:rgba(0,0,0,.65);color:#fff;font-size:0.68em;padding:2px 8px;border-radius:10px;pointer-events:none;font-weight:600;">1 / ${screenshots.length}</div>` : ''}
+        ${hasMultiple ? `<div style="position:absolute;bottom:7px;right:9px;background:rgba(0,0,0,.65);color:#fff;font-size:0.68em;padding:2px 8px;border-radius:20px;pointer-events:none;font-weight:600;">1 / ${screenshots.length}</div>` : ''}
       </div>
 
       <!-- Description -->
@@ -237,7 +237,7 @@ function _hpmStoreRenderCard(pkg) {
       <!-- Tags -->
       ${pkg.tags && pkg.tags.length ? `
         <div style="display:flex;gap:5px;flex-wrap:wrap;">
-          ${pkg.tags.slice(0, 4).map(t => `<span style="font-size:0.68em;background:rgba(255,255,255,.06);color:var(--muted);padding:2px 7px;border-radius:5px;">#${_hesc(t)}</span>`).join('')}
+          ${pkg.tags.slice(0, 4).map(t => `<span style="font-size:0.68em;background:rgba(255,255,255,.06);color:var(--muted);padding:2px 8px;border-radius:20px;border:1px solid rgba(255,255,255,.1);">#${_hesc(t)}</span>`).join('')}
         </div>` : ''}
 
       <!-- Footer Command -->
@@ -303,7 +303,7 @@ function _hpmStoreBuildDetailModal() {
             </button>
             <div id="hpm-carousel-counter"
                  style="display:none;position:absolute;bottom:10px;right:12px;background:rgba(0,0,0,.65);
-                        color:#fff;font-size:0.72em;padding:3px 9px;border-radius:12px;
+                        color:#fff;font-size:0.72em;padding:3px 10px;border-radius:20px;
                         pointer-events:none;font-weight:600;letter-spacing:.4px;"></div>
           </div>
           <!-- Thumbnail strip -->
@@ -359,7 +359,7 @@ function _hpmCarouselRender() {
     if (!gifBadge) {
       gifBadge = document.createElement('div');
       gifBadge.id = 'hpm-carousel-gif-badge';
-      gifBadge.style.cssText = 'position:absolute;top:10px;left:10px;background:rgba(0,0,0,.7);color:#fff;font-size:0.65em;font-weight:700;letter-spacing:.5px;padding:2px 7px;border-radius:8px;pointer-events:none;';
+      gifBadge.style.cssText = 'position:absolute;top:10px;left:10px;background:rgba(0,0,0,.7);color:#fff;font-size:0.65em;font-weight:700;letter-spacing:.5px;padding:2px 8px;border-radius:20px;pointer-events:none;';
       gifBadge.textContent = 'GIF';
       img.parentElement.style.position = 'relative';
       img.parentElement.appendChild(gifBadge);
@@ -388,7 +388,7 @@ function _hpmCarouselRender() {
           <img src="${_hesc(src)}"
                style="width:100%;height:100%;object-fit:cover;display:block;"
                onerror="this.parentElement.style.display='none'">
-          ${thumbGif ? `<div style="position:absolute;bottom:2px;right:3px;background:rgba(0,0,0,.75);color:#fff;font-size:0.55em;font-weight:700;padding:1px 4px;border-radius:4px;pointer-events:none;">GIF</div>` : ''}
+          ${thumbGif ? `<div style="position:absolute;bottom:2px;right:3px;background:rgba(0,0,0,.75);color:#fff;font-size:0.55em;font-weight:700;padding:1px 6px;border-radius:20px;pointer-events:none;">GIF</div>` : ''}
         </div>`;
       }).join('');
     } else {
@@ -429,7 +429,7 @@ window.hpmStoreShowReadMe = async function (pkgId) {
         <div style="font-size:1.2em;font-weight:800;color:var(--text);line-height:1.2;">${_hesc(pkg.name)}</div>
         <div style="display:flex;align-items:center;gap:8px;margin-top:7px;flex-wrap:wrap;">
           <span style="font-size:0.7em;font-weight:700;letter-spacing:.6px;text-transform:uppercase;
-                       color:${meta.color};background:${meta.color}18;padding:2px 8px;border-radius:5px;">
+                       color:${meta.color};background:${meta.color}18;padding:2px 8px;border-radius:20px;border:1px solid ${meta.color}44;display:inline-flex;align-items:center;line-height:1.2;">
             <i class="fas ${meta.icon}" style="margin-right:4px;"></i>${meta.label}
           </span>
           <span style="font-size:0.75em;color:var(--muted);">v${_hesc(pkg.version)}</span>
@@ -439,7 +439,7 @@ window.hpmStoreShowReadMe = async function (pkgId) {
         ${pkg.description ? `<div style="font-size:0.83em;color:var(--muted);margin-top:9px;line-height:1.55;">${_hesc(pkg.description)}</div>` : ''}
         ${pkg.tags && pkg.tags.length ? `
           <div style="display:flex;gap:5px;flex-wrap:wrap;margin-top:8px;">
-            ${pkg.tags.map(t => `<span style="font-size:0.67em;background:rgba(255,255,255,.07);color:var(--muted);padding:2px 7px;border-radius:5px;">#${_hesc(t)}</span>`).join('')}
+            ${pkg.tags.map(t => `<span style="font-size:0.67em;background:rgba(255,255,255,.07);color:var(--muted);padding:2px 8px;border-radius:20px;border:1px solid rgba(255,255,255,.1);">#${_hesc(t)}</span>`).join('')}
           </div>` : ''}
         ${(pkg.dependencies && pkg.dependencies.length > 0) || (pkg.pip_requirements && pkg.pip_requirements.length > 0) ? `
           <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px;padding-top:10px;border-top:1px solid rgba(255,255,255,0.05);">
@@ -447,13 +447,13 @@ window.hpmStoreShowReadMe = async function (pkgId) {
               <div style="font-size:0.72em;color:var(--muted);display:flex;align-items:center;gap:6px;">
                 <i class="fas fa-boxes" style="color:#3b82f6;"></i>
                 <span style="font-weight:600;opacity:0.7;">${_t('Depends on:','Dipende da:','Depende de:')}</span>
-                ${pkg.dependencies.map(d => `<span style="background:rgba(59,130,246,0.15);color:#60a5fa;padding:2px 6px;border-radius:4px;font-weight:600;">${_hesc(d)}</span>`).join('')}
+                ${pkg.dependencies.map(d => `<span style="background:rgba(59,130,246,0.15);color:#60a5fa;padding:2px 8px;border-radius:20px;border:1px solid rgba(59,130,246,0.3);font-weight:600;">${_hesc(d)}</span>`).join('')}
               </div>` : ''}
             ${pkg.pip_requirements && pkg.pip_requirements.length ? `
               <div style="font-size:0.72em;color:var(--muted);display:flex;align-items:center;gap:6px;">
                 <i class="fab fa-python" style="color:#f59e0b;"></i>
                 <span style="font-weight:600;opacity:0.7;">PIP:</span>
-                ${pkg.pip_requirements.map(p => `<span style="background:rgba(245,158,11,0.15);color:#fbbf24;padding:2px 6px;border-radius:4px;font-weight:600;">${_hesc(p.split('==')[0].split('>=')[0])}</span>`).join('')}
+                ${pkg.pip_requirements.map(p => `<span style="background:rgba(245,158,11,0.15);color:#fbbf24;padding:2px 8px;border-radius:20px;border:1px solid rgba(245,158,11,0.3);font-weight:600;">${_hesc(p.split('==')[0].split('>=')[0])}</span>`).join('')}
               </div>` : ''}
           </div>` : ''}
       </div>
@@ -461,7 +461,7 @@ window.hpmStoreShowReadMe = async function (pkgId) {
 
   if (installBtn) {
     installBtn.innerHTML = `
-    <div style="display:flex;align-items:center;background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:6px 10px;gap:8px;max-width:300px;">
+    <div style="display:flex;align-items:center;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:6px 10px;gap:8px;max-width:300px;">
       <div id="cmd-modal-${pkg.id}" style="font-family:var(--font-mono);font-size:0.75em;color:var(--accent2);flex-grow:1;user-select:all;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">/hpm install ${pkg.id}</div>
       <button onclick="copyCmd('cmd-modal-${pkg.id}')" style="background:transparent;border:none;color:var(--muted);cursor:pointer;padding:4px;display:flex;align-items:center;justify-content:center;transition:color 0.2s;" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'" title="Copy command">
         <i class="far fa-copy"></i>
@@ -493,7 +493,7 @@ window.hpmStoreShowReadMe = async function (pkgId) {
         <i class="fas ${icon}" style="font-size:0.9em;"></i>${label}</span>`;
 
     const pill = (text, bg, color, border) =>
-      `<span style="font-size:0.72em;padding:3px 9px;border-radius:12px;
+      `<span style="font-size:0.72em;padding:3px 10px;border-radius:20px;
               background:${bg};color:${color};border:1px solid ${border};font-weight:500;">${_hesc(text)}</span>`;
 
     capHtml = `
