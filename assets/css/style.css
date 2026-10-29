@@ -597,3 +597,111 @@ footer p {
   from {opacity: .4} 
   to {opacity: 1}
 }
+
+
+/* ─── Core Motto / Manifesto Banner ──────────────────────────────────────── */
+.motto-banner-wrap {
+  margin: 32px auto 35px;
+  max-width: 860px;
+  width: 100%;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.motto-card {
+  position: relative;
+  background: linear-gradient(135deg, rgba(20, 23, 38, 0.95) 0%, rgba(28, 32, 51, 0.95) 100%);
+  border: 1px solid rgba(108, 140, 255, 0.35);
+  border-radius: 14px;
+  padding: 26px 32px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 25px rgba(108, 140, 255, 0.15);
+  backdrop-filter: blur(12px);
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.motto-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #6c8cff 25%, #a78bfa 50%, #ff8c00 75%, transparent);
+}
+
+.motto-card:hover {
+  border-color: rgba(108, 140, 255, 0.55);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6), 0 0 35px rgba(108, 140, 255, 0.28);
+  transform: translateY(-2px);
+}
+
+.motto-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 14px;
+  border-radius: 20px;
+  background: rgba(255, 140, 0, 0.12);
+  border: 1px solid rgba(255, 140, 0, 0.35);
+  color: #ff9d2e;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 14px;
+}
+
+.motto-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ff8c00;
+  box-shadow: 0 0 8px #ff8c00;
+  animation: mottoPulse 2s infinite ease-in-out;
+}
+
+@keyframes mottoPulse {
+  0%, 100% { opacity: 0.5; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.2); box-shadow: 0 0 12px #ff8c00; }
+}
+
+.motto-quote {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.7;
+  color: var(--text);
+  font-family: var(--font-sans);
+  letter-spacing: -0.2px;
+}
+
+.motto-highlight-primary {
+  color: #ffffff;
+  font-weight: 800;
+  text-shadow: 0 0 14px rgba(255, 255, 255, 0.2);
+}
+
+.motto-highlight-gradient {
+  background: linear-gradient(135deg, #6c8cff 0%, #a78bfa 50%, #f472b6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+@media (max-width: 768px) {
+  .motto-banner-wrap {
+    margin: 24px auto 28px;
+    padding: 0 12px;
+  }
+  .motto-card {
+    padding: 20px 18px;
+  }
+  .motto-quote {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
