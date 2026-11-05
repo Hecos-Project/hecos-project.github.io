@@ -1,5 +1,5 @@
-title: Hecos Core
-description: Your Cybernetic Companion. Locale. Modulare. Sovrano.
+title: "HECOS — Helping Companion System"
+description: "Hecos Core: Helping Companion System. Il tuo Cybernetic Companion locale, modulare e sovrano."
 baseurl: ""
 # No theme requested as we use custom HTML/CSS
 markdown: kramdown
